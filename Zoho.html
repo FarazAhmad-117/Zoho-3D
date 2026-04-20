@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zoho — Elixir du Temps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="webgl"></canvas>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<!-- Fixed navigation -->
+<nav class="nav">
+  <a class="mark" href="#hero">Zoho<sup>™</sup></a>
+  <ul>
+    <li>The Serum</li>
+    <li>Ritual</li>
+    <li>Journal</li>
+    <li>Atelier</li>
+  </ul>
+  <a class="cta" href="#cta">Acquire · $248</a>
+</nav>
+
+<!-- Side rails -->
+<div class="rail left">
+  <span class="live">Live render · WebGL</span>
+</div>
+<div class="rail right">
+  <span>Édition limitée · MMXXVI</span>
+</div>
+
+<!-- Scroll progress -->
+<div class="progress">
+  <span class="pct">000</span>
+  <div class="bar"><i></i></div>
+  <span>Scroll</span>
+</div>
+
+<!-- Chapter label -->
+<div class="chapter">
+  <span class="num">01</span>
+  <span class="name">First Contact</span>
+</div>
+
+<main class="content">
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" data-screen-label="01 Hero">
+    <div class="stack">
+      <div class="pre">
+        <span>N° 01</span><span class="dot"></span>
+        <span>Elixir du Temps</span><span class="dot"></span>
+        <span>30 ml · 1.0 fl oz</span>
+      </div>
+      <h1 class="title">
+        <span>Zo</span><span><em>h</em></span><span>o</span>
+      </h1>
+      <div class="sub">a serum, slowly distilled — time held in glass</div>
+    </div>
+    <div class="meta-l">
+      <strong>Origine</strong>
+      Vallée de<br/>Grasse, FR<br/>
+      — lat. 43.65°
+    </div>
+    <div class="meta-r">
+      <strong>Composition</strong>
+      18 botanicals<br/>
+      cold-pressed<br/>
+      — bottle N° 00412
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to reveal</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ============ INTRO ============ -->
+  <section id="intro" data-screen-label="02 Intro">
+    <div class="left">
+      <div class="eyebrow" data-reveal>Manifesto · 002</div>
+      <p class="quote" data-reveal>
+        We <em>do not</em> chase youth.<br/>
+        We compose <em>time</em> — <br/>
+        a patient geometry of <em>oil</em>,<br/>
+        <em>water</em>, and <em>air</em>.
+      </p>
+    </div>
+    <div class="right">
+      <div class="eyebrow dim" data-reveal>Principle</div>
+      <div class="h-md" data-reveal style="max-width: 28ch;">
+        Seventeen cold extractions. A single bottle. Eight weeks from the harvest to your hand.
+      </div>
+      <div class="cap" data-reveal>— Maison Zoho, Atelier N° IX</div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES (horizontal pin) ============ -->
+  <section id="features" data-screen-label="03 Features">
+    <div class="hcounter">03</div>
+    <div class="pin">
+      <div class="track">
+        <div class="panel">
+          <div class="copy">
+            <div class="num">Formulation · i</div>
+            <h2>A <em>molecular</em><br/>stillness.</h2>
+            <p class="body-lg">Phytoactive peptides suspended in micro-encapsulated squalane — the molecule rests until it meets skin, then unfolds over forty-eight hours.</p>
+            <div class="metric">
+              <div><div class="k">Diameter</div><div class="v"><em>42</em> nm</div></div>
+              <div><div class="k">Stability</div><div class="v"><em>36</em> mo</div></div>
+              <div><div class="k">pH</div><div class="v"><em>5.4</em></div></div>
+            </div>
+          </div>
+          <div class="visual"></div>
+        </div>
+
+        <div class="panel">
+          <div class="copy">
+            <div class="num">Formulation · ii</div>
+            <h2>Cold &amp;<br/><em>unhurried</em>.</h2>
+            <p class="body-lg">Pressed at four degrees below zero. We lose volume; we keep the architecture of the plant — every ester, every aldehyde, every trace of its place.</p>
+            <div class="metric">
+              <div><div class="k">Temperature</div><div class="v"><em>-4°</em> C</div></div>
+              <div><div class="k">Yield loss</div><div class="v"><em>62</em>%</div></div>
+              <div><div class="k">Duration</div><div class="v"><em>18</em> h</div></div>
+            </div>
+          </div>
+          <div class="visual"></div>
+        </div>
+
+        <div class="panel">
+          <div class="copy">
+            <div class="num">Formulation · iii</div>
+            <h2>Time,<br/><em>suspended</em>.</h2>
+            <p class="body-lg">Argon-sealed amber glass. Zero oxygen exposure from filling to opening — the elixir meets air only at your ritual, never before.</p>
+            <div class="metric">
+              <div><div class="k">O₂ ingress</div><div class="v"><em>0.00</em>%</div></div>
+              <div><div class="k">UV block</div><div class="v"><em>99.4</em>%</div></div>
+              <div><div class="k">Glass</div><div class="v">Murano</div></div>
+            </div>
+          </div>
+          <div class="visual"></div>
+        </div>
+
+        <div class="panel">
+          <div class="copy">
+            <div class="num">Formulation · iv</div>
+            <h2>The <em>ritual</em><br/>itself.</h2>
+            <p class="body-lg">Three drops, morning and evening, pressed — never rubbed — into cleansed skin. A practice measured in stillness, not in seconds.</p>
+            <div class="metric">
+              <div><div class="k">Drops</div><div class="v">III · III</div></div>
+              <div><div class="k">Rest</div><div class="v"><em>90</em>s</div></div>
+              <div><div class="k">Cadence</div><div class="v">AM · PM</div></div>
+            </div>
+          </div>
+          <div class="visual"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INGREDIENTS ============ -->
+  <section id="ingredients" data-screen-label="04 Ingredients">
+    <div class="head">
+      <div>
+        <div class="eyebrow" data-reveal>Composition · 004</div>
+        <h2 data-reveal>Eighteen<br/><em>botanicals</em>.</h2>
+      </div>
+      <p class="body-lg" data-reveal>A formula read like a score — each note present, each restrained. We list every ingredient, by percentage, by origin. Transparency is not a feature. It is the floor.</p>
+    </div>
+    <div class="list">
+      <div class="ingr" data-pct="34">
+        <div class="idx">i · 01</div>
+        <div class="name">Squalane<em>from olive · Andalucía</em></div>
+        <div class="desc">Suspension medium. Molecularly identical to skin's own lipid, pressed from cold-crushed olives, fractionally distilled under vacuum.</div>
+        <div class="pct">34.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="22">
+        <div class="idx">i · 02</div>
+        <div class="name">Bakuchiol<em>psoralea corylifolia · Kerala</em></div>
+        <div class="desc">Retinoid alternative from Ayurvedic legume. Stimulates cellular turnover without photo-sensitivity. Harvested at third moon.</div>
+        <div class="pct">22.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="14">
+        <div class="idx">i · 03</div>
+        <div class="name">Centella asiatica<em>pennywort · Madagascar</em></div>
+        <div class="desc">Triterpene-rich extract. Repairs the barrier, calms reactive skin, carries a quiet, green backbone through the formula.</div>
+        <div class="pct">14.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="11">
+        <div class="idx">i · 04</div>
+        <div class="name">Tamanu<em>calophyllum inophyllum · Polynesia</em></div>
+        <div class="desc">Deep-green, viscous, lightly smoked. Antioxidant calophyllolide; scar-softening; a base note that grounds the composition.</div>
+        <div class="pct">11.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="8">
+        <div class="idx">i · 05</div>
+        <div class="name">Rosa damascena<em>rose otto · Isparta</em></div>
+        <div class="desc">Twelve thousand petals per fifteen millilitres. Gathered before sunrise. The top note — fleeting, unmistakable.</div>
+        <div class="pct">8.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="6">
+        <div class="idx">i · 06</div>
+        <div class="name">Argan<em>argania spinosa · Souss</em></div>
+        <div class="desc">First-press, organic-certified. Rich in tocopherols. Pressed within 48 hours of the kernel leaving the tree.</div>
+        <div class="pct">6.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="3">
+        <div class="idx">i · 07</div>
+        <div class="name">Helichrysum<em>immortelle · Corsica</em></div>
+        <div class="desc">Everlasting flower, steam-distilled. Di-ketones repair micro-capillary damage; structural brightness.</div>
+        <div class="pct">3.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+      <div class="ingr" data-pct="2">
+        <div class="idx">i · 08</div>
+        <div class="name">+ eleven trace actives<em>see full dossier — p. 14</em></div>
+        <div class="desc">Neroli, sea fennel, blue tansy, frankincense serrata, sandalwood album, davana, chamomile bleu, yarrow, carrot seed, rose hip, sea buckthorn.</div>
+        <div class="pct">2.0%</div>
+        <div class="bar-wrap"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY PARALLAX ============ -->
+  <section id="story" data-screen-label="05 Story">
+    <div class="eyebrow" data-reveal style="margin-bottom: 30px;">Process · 005</div>
+    <div class="columns">
+      <div class="col left">
+        <div class="plate short">
+          <div class="ph">Fig. 01 — Harvest, pre-dawn</div>
+          <div class="k">Étape 01</div>
+          <div class="t">Harvest<em>— pre-dawn · 4°C</em></div>
+          <div class="d">The rose field at Isparta is walked between 03:00 and 05:00, when the petals still carry night-water. A single passage, never twice.</div>
+        </div>
+        <div class="plate tall">
+          <div class="ph">Fig. 02 — Distillation vessel</div>
+          <div class="k">Étape 02</div>
+          <div class="t">Distillation<em>— copper still, 14h</em></div>
+          <div class="d">Low-and-slow in hand-hammered copper. We pull only the heart cut. Heads and tails are returned to the field as compost.</div>
+        </div>
+      </div>
+      <div class="col mid">
+        <div class="plate tall">
+          <div class="ph">Fig. 03 — Cold press, -4°C</div>
+          <div class="k">Étape 03</div>
+          <div class="t">Cold press<em>— argon atmosphere</em></div>
+          <div class="d">Oils are expressed below freezing in an oxygen-free chamber. Yield drops by two thirds; molecular integrity holds.</div>
+        </div>
+        <div class="plate">
+          <div class="ph">Fig. 04 — Blending room</div>
+          <div class="k">Étape 04</div>
+          <div class="t">Composition<em>— Atelier N° IX</em></div>
+          <div class="d">Seventeen extracts are read like a symphony. The perfumer-formulator tests each lot for forty days before approval.</div>
+        </div>
+      </div>
+      <div class="col right">
+        <div class="plate">
+          <div class="ph">Fig. 05 — Filling, argon-sealed</div>
+          <div class="k">Étape 05</div>
+          <div class="t">Fill &amp; seal<em>— zero O₂</em></div>
+          <div class="d">Each bottle is filled under argon, stoppered, and numbered by hand. The pipette is ground glass — never plastic.</div>
+        </div>
+        <div class="plate short">
+          <div class="ph">Fig. 06 — Final assay</div>
+          <div class="k">Étape 06</div>
+          <div class="t">Assay<em>— 48-hour quarantine</em></div>
+          <div class="d">Every batch rests for two days before release. Independent HPLC confirms active concentrations within 0.5%.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner" data-reveal>
+      Eight weeks.<br/>One <em>harvest</em>.<br/>A thousand <em>bottles</em>.
+    </div>
+  </section>
+
+  <!-- ============ ROTATION ============ -->
+  <section id="rotation" data-screen-label="06 Rotation">
+    <div class="pin">
+      <div class="info">
+        <div class="eyebrow">Anatomy · 006</div>
+
+        <div class="step active">
+          <h3>The <em>body</em> —<br/>Murano glass, <br/>hand-blown.</h3>
+          <p class="body body">Forty-one millimetres at its shoulder, tapered to a thirty-two millimetre neck. Each vessel is blown by a single artisan and signed on the base with an inventory number.</p>
+          <div class="specs">
+            <div><div class="k">Glass</div><div class="v"><em>Murano</em> N° 214</div></div>
+            <div><div class="k">Mass</div><div class="v"><em>182</em> g</div></div>
+            <div><div class="k">Capacity</div><div class="v"><em>30</em> ml</div></div>
+            <div><div class="k">Provenance</div><div class="v">Venezia</div></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>The <em>shoulder</em> —<br/>a slow curve.</h3>
+          <p class="body body">The transition from body to neck is drawn by hand. No two bottles share exactly the same line — we embrace the variance. Each is measured, graded, individually certified.</p>
+          <div class="specs">
+            <div><div class="k">Radius</div><div class="v"><em>14</em> mm</div></div>
+            <div><div class="k">Tolerance</div><div class="v">± 0.4 mm</div></div>
+            <div><div class="k">Inspections</div><div class="v">04 stages</div></div>
+            <div><div class="k">Reject rate</div><div class="v"><em>22</em>%</div></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>The <em>neck</em> —<br/>ground &amp; lapped.</h3>
+          <p class="body body">Ground to receive a ground-glass stopper. No polymer, no liner. Glass against glass — a seal that holds for decades, not seasons.</p>
+          <div class="specs">
+            <div><div class="k">Thread</div><div class="v">none</div></div>
+            <div><div class="k">Seal</div><div class="v"><em>glass-on-glass</em></div></div>
+            <div><div class="k">Tolerance</div><div class="v">± 0.05 mm</div></div>
+            <div><div class="k">Pass rate</div><div class="v"><em>61</em>%</div></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>The <em>pipette</em> —<br/>bronze &amp; glass.</h3>
+          <p class="body body">Solid bronze collar, patinated to a warm brown. The dropper itself is ground borosilicate, drawn to a calibrated 0.9 mm orifice — three drops every time.</p>
+          <div class="specs">
+            <div><div class="k">Collar</div><div class="v">Bronze</div></div>
+            <div><div class="k">Orifice</div><div class="v"><em>0.9</em> mm</div></div>
+            <div><div class="k">Drop</div><div class="v"><em>34</em> μL</div></div>
+            <div><div class="k">Finish</div><div class="v">hand-patina</div></div>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>The <em>label</em> —<br/>letterpress, cotton.</h3>
+          <p class="body body">Printed by a four-person letterpress shop in Lyon. Hundred-percent cotton stock, debossed on a nineteenth-century Heidelberg. Each batch bears a unique lot number.</p>
+          <div class="specs">
+            <div><div class="k">Press</div><div class="v">Heidelberg 1962</div></div>
+            <div><div class="k">Stock</div><div class="v"><em>cotton</em> 320 gsm</div></div>
+            <div><div class="k">Ink</div><div class="v">soy-based</div></div>
+            <div><div class="k">Atelier</div><div class="v">Lyon, FR</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="dots">
+          <div class="d active">01 · Body</div>
+          <div class="d">02 · Shoulder</div>
+          <div class="d">03 · Neck</div>
+          <div class="d">04 · Pipette</div>
+          <div class="d">05 · Label</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <section id="specs" data-screen-label="07 Specs">
+    <div>
+      <div class="eyebrow" data-reveal>Dimensions · 007</div>
+      <h2 class="h-xl" data-reveal style="margin-top: 22px;">Every<br/><em>measure</em>.</h2>
+      <dl>
+        <div><dt>Height overall</dt><dd><em>118</em> mm</dd></div>
+        <div><dt>Diameter, body</dt><dd><em>41</em> mm</dd></div>
+        <div><dt>Capacity</dt><dd><em>30</em> ml</dd></div>
+        <div><dt>Mass, filled</dt><dd><em>214</em> g</dd></div>
+        <div><dt>Glass</dt><dd>Murano, amber</dd></div>
+        <div><dt>Collar</dt><dd>Bronze, patina</dd></div>
+        <div><dt>Pipette</dt><dd>Borosilicate</dd></div>
+        <div><dt>Label</dt><dd>Cotton, 320 gsm</dd></div>
+        <div><dt>Shelf life</dt><dd><em>36</em> mo, sealed</dd></div>
+        <div><dt>Batch</dt><dd>N° 2026.04.412</dd></div>
+      </dl>
+    </div>
+    <div class="visual-slot">
+      <div class="corners"><span></span><span></span><span></span><span></span></div>
+      <div class="label">Fig. 07 — technical elevation · 1:1</div>
+      <div class="scale"></div>
+      <div class="mark m1">118</div>
+      <div class="mark m2">0</div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" data-screen-label="08 Reviews">
+    <div class="head">
+      <div>
+        <div class="eyebrow" data-reveal>Acclaim · 008</div>
+        <h2 class="h-xl" data-reveal style="margin-top: 22px;">What<br/>they<br/><em>wrote</em>.</h2>
+      </div>
+      <p class="body-lg" data-reveal>Selected press, unedited, across eighteen months of the current edition. We thank them for their time, and their honesty.</p>
+    </div>
+
+    <div class="grid">
+      <div class="review w7 tall">
+        <div class="src">Vogue Paris</div>
+        <q>It is the <em>first serum in a decade</em> to make me consider the bottle as seriously as the formula. A rare, deeply considered object — and a quietly extraordinary one to use.</q>
+        <div class="by">— Marine Deroche · March 2026</div>
+      </div>
+      <div class="review w5 tall">
+        <div class="src">Monocle</div>
+        <q>Patient, precise, <em>uncompromising</em>. The kind of craft you no longer expect to find.</q>
+        <div class="by">— The Forecast, Issue 141</div>
+      </div>
+      <div class="review w4">
+        <div class="src">T Magazine</div>
+        <q>A quiet masterwork.</q>
+        <div class="by">— New York Times · Style</div>
+      </div>
+      <div class="review w4">
+        <div class="src">Kinfolk</div>
+        <q>Slow design, <em>applied to skin</em>.</q>
+        <div class="by">— Issue 49, Rituals</div>
+      </div>
+      <div class="review w4">
+        <div class="src">Wallpaper*</div>
+        <q>A triumph of <em>restraint</em>.</q>
+        <div class="by">— Beauty Annual, 2026</div>
+      </div>
+
+      <div class="review w8">
+        <div class="src">Cereal</div>
+        <q>Most cosmetics scream. Zoho <em>whispers</em> — and is heard more clearly for it. The bottle alone is an argument for owning fewer things, better made.</q>
+        <div class="by">— Volume 27 · Editor's Objects</div>
+      </div>
+      <div class="review w4">
+        <div class="src">AnOther</div>
+        <q>Every detail <em>accounted for</em>.</q>
+        <div class="by">— Rosanna Falconer</div>
+      </div>
+    </div>
+
+    <div class="marquee">
+      <span>Vogue <span class="sep">·</span> Monocle <span class="sep">·</span> T Magazine <span class="sep">·</span> Kinfolk <span class="sep">·</span> Wallpaper* <span class="sep">·</span> Cereal <span class="sep">·</span> AnOther <span class="sep">·</span> The World of Interiors <span class="sep">·</span> Apartamento <span class="sep">·</span></span>
+      <span>Vogue <span class="sep">·</span> Monocle <span class="sep">·</span> T Magazine <span class="sep">·</span> Kinfolk <span class="sep">·</span> Wallpaper* <span class="sep">·</span> Cereal <span class="sep">·</span> AnOther <span class="sep">·</span></span>
+    </div>
+  </section>
+
+  <!-- ============ VARIANTS ============ -->
+  <section id="variants" data-screen-label="09 Variants">
+    <div class="head">
+      <div>
+        <div class="eyebrow" data-reveal>The Collection · 009</div>
+        <h2 class="h-xl" data-reveal style="margin-top: 22px;">Six<br/><em>editions</em>.</h2>
+      </div>
+      <p class="body-lg" data-reveal>Each composition is a study in a different register. The formula is shared; the botanical weight is not. Sold singly or as the complete cabinet.</p>
+    </div>
+
+    <div class="row">
+      <div class="variant" style="--swatch:#d4a574">
+        <div class="v-idx">N° 01</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Amber<em>— Original</em></div>
+        <div class="v-desc">Rose damascena, bakuchiol, squalane. The reference composition.</div>
+        <div class="v-price">$248</div>
+      </div>
+      <div class="variant" style="--swatch:#8b6f47">
+        <div class="v-idx">N° 02</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Sienna<em>— Warmth</em></div>
+        <div class="v-desc">Heliotrope, argan, tonka. Deepened, grounded, evening skin.</div>
+        <div class="v-price">$248</div>
+      </div>
+      <div class="variant" style="--swatch:#3b5c4a">
+        <div class="v-idx">N° 03</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Forest<em>— Green</em></div>
+        <div class="v-desc">Pennywort, tamanu, cypress. Repair and quietness.</div>
+        <div class="v-price">$248</div>
+      </div>
+      <div class="variant" style="--swatch:#6b2828">
+        <div class="v-idx">N° 04</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Garnet<em>— Depth</em></div>
+        <div class="v-desc">Rose hip, pomegranate seed, davana. A rich, mature edition.</div>
+        <div class="v-price">$268</div>
+      </div>
+      <div class="variant" style="--swatch:#2a2f3d">
+        <div class="v-idx">N° 05</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Night<em>— Nocturne</em></div>
+        <div class="v-desc">Blue tansy, chamomile bleu, yarrow. The ritual before sleep.</div>
+        <div class="v-price">$268</div>
+      </div>
+      <div class="variant" style="--swatch:#b09060">
+        <div class="v-idx">N° 06</div>
+        <div class="v-swatch"></div>
+        <div class="v-name">Gold<em>— Édition Rare</em></div>
+        <div class="v-desc">Frankincense sacra, immortelle, sandalwood album. 120 bottles, numbered.</div>
+        <div class="v-price">$488</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDER ============ -->
+  <section id="founder" data-screen-label="10 Founder">
+    <div class="portrait">
+      <div class="cap2">Portrait — N. Aubert · Atelier N° IX · Grasse, 2025</div>
+    </div>
+    <div class="copy">
+      <div class="eyebrow" data-reveal>Origin · 010</div>
+      <h2 data-reveal>A letter from<br/>the <em>founder</em>.</h2>
+      <p data-reveal>I grew up between a rose field and a perfume bench. My grandmother taught me that a bottle is a <em>promise</em> — that whatever you put inside must be worth the glass around it.</p>
+      <p data-reveal>For most of my career I watched that promise be broken, quietly, at every stage of the industry. Zoho is my answer. Not a brand. A <em>correction</em>.</p>
+      <p data-reveal>Eight weeks, eighteen ingredients, one bottle at a time. If that sounds slow, good — it is. It always was.</p>
+      <div class="sig">— Noëlle Aubert</div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="cta" data-screen-label="11 Acquire">
+    <div>
+      <h2>Hold <em>time</em><br/>in your hand.</h2>
+      <a class="btn" href="#">Acquire N° 01 · $248 <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div>
+      <div class="brand">Zoho</div>
+      <div style="margin-top: 16px; color: var(--ink-mute); letter-spacing: 0.12em;">
+        Elixir du Temps · est. MMXXIV<br/>
+        Atelier N° IX, Grasse · France
+      </div>
+    </div>
+    <ul>
+      <li>The Serum</li>
+      <li>N° 01 Amber</li>
+      <li>N° 02 Sienna</li>
+      <li>N° 03 Forest</li>
+      <li>The Cabinet</li>
+    </ul>
+    <ul>
+      <li>Maison</li>
+      <li>Atelier</li>
+      <li>Journal</li>
+      <li>Dossier</li>
+      <li>Press</li>
+    </ul>
+    <ul>
+      <li>Correspondence</li>
+      <li>contact@zoho.fr</li>
+      <li>+33 4 93 · · · · · ·</li>
+      <li>Newsletter</li>
+      <li>Instagram</li>
+    </ul>
+    <div class="copyrow">
+      <span>© MMXXVI · Maison Zoho, all rights reserved</span>
+      <span>Bottle N° 00412 · batch 2026.04 · rendered live in WebGL</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Tweaks panel (hidden unless host activates) -->
+<div id="tweaks" aria-hidden="true"></div>
+
+<!-- Libraries -->
+<script src="https://unpkg.com/three@0.160.1/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<!-- App -->
+<script src="scene.js"></script>
+<script src="scroll.js"></script>
+<script src="tweaks.js"></script>
+
+</body>
+</html>
